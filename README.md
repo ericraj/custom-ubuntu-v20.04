@@ -1,28 +1,52 @@
-# custom-ubuntu-v20.04
+# Custom Ubuntu Desktop v20.04 with Gnome v3.36.5
+
+<br/>
+
+## Preview
+
+<img src="./Preview.png" alt="Preview">
+<br/>
+<br/>
 
 ## Move “Show Applications” right to left of the Dock
 
-```sh
-gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
-```
+`gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true`
 
-## [How to Change the ‘Show Applications’ Grid Icon](https://ubuntuhandbook.org/index.php/2019/01/change-show-applications-grid-icon-ubuntu-18-04/)
+## Change “Show Applications” Grid Icon
 
-## [GTK3/4 Themes](https://www.pling.com/s/Gnome/browse?cat=135&ord=rating)
+[Tuto link](https://ubuntuhandbook.org/index.php/2019/01/change-show-applications-grid-icon-ubuntu-18-04/)
 
-1. [McMojave](https://www.pling.com/s/Gnome/p/1275087)
-2. [Sweet](https://www.pling.com/s/Gnome/p/1253385)
+## GTK3/4 Theme
 
-## Grub themes
+[McMojave](https://www.pling.com/s/Gnome/p/1275087) or [Sweet](https://www.pling.com/s/Gnome/p/1253385) or other.
 
-1. [Grub 2 themes](https://github.com/vinceliuice/grub2-themes)
-2. [CyberRe](https://www.pling.com/s/Gnome/p/1420727)
-3. [BigSur GRUB Theme](https://www.pling.com/s/Gnome/p/1443844)
+## Gnome Shell Theme
 
-## [Color Scheme for Gnome Terminal](https://mayccoll.github.io/Gogh/)
+[Black Maia](https://www.pling.com/s/Gnome/p/1201366)
 
-## Conky
+## Grub Theme
 
-1. [Video](https://www.youtube.com/watch?v=qC0mnGprbeM&list=TLPQMTkwNzIwMjGN_il7hPryBQ&index=3&t=816s)
-2. [Link](https://www.linux.com/topic/desktop/how-install-and-configure-conky/)
-3. [Config](https://drive.google.com/file/d/13fOfn0gq38zOPBwi6wPjba0vEmdLvnNe/view)
+[Grub 2 themes](https://github.com/vinceliuice/grub2-themes) or [CyberRe](https://www.pling.com/s/Gnome/p/1420727) or [BigSur GRUB Theme](https://www.pling.com/s/Gnome/p/1443844)
+
+## Color Scheme for Gnome Terminal
+
+[Gogh](https://mayccoll.github.io/Gogh/)
+
+## Conky Setup
+
+1. Install packages with `sudo apt install conky-all jq`
+
+2. Install all fonts in `conky-fonts` folder
+3. Copy `.conky` folder to your home directory with `cp -r .conky/ ~`
+
+   If you want change your city location, change your `city_id` in `.conky/Antares/scripts/weather.sh`
+
+4. Run conky on startup
+
+   In `conky.sh.desktop`, change `Exec=/home/eric/.conky/start_conky.sh` to `Exec=/home/your-user-name/.conky/start_conky.sh`
+
+   Copy `conky.sh.desktop` to `~/.config/autostart` with `cp conky.sh.desktop ~/.config/autostart`
+
+   Now if you start your PC, conky start automatically.
+
+5. Run conky with `~/.conky/start_conky.sh`
