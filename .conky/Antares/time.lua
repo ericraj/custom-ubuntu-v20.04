@@ -38,11 +38,18 @@ function numberToWord(number)
 end
 
 function conky_Hour()
-    return numberToWord(os.date("%I") + 0)
+    hour = numberToWord(os.date("%I") + 0)
+    -- Remove space at the end of vword
+    hour = string.gsub(hour, "%s+", "") 
+    return hour
 end
 
 function conky_Minute()
     return numberToWord(os.date("%M") + 0)
+end
+
+function conky_Second()
+  return numberToWord(os.date("%S") + 0)
 end
 
 function conky_Date()
