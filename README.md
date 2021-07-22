@@ -50,3 +50,7 @@
    Now if you start your PC, conky start automatically.
 
 5. Run conky with `~/.conky/start_conky.sh`
+
+## Global menu for Gnome
+
+[Fildem](https://github.com/gonzaarcr/Fildem)
